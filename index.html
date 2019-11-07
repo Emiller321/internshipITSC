@@ -2,23 +2,37 @@
 
 
 <html lang = "en">
-<head>
+    <head>
 		<title>Resume Application</title>
 		<meta charset="utf-8">
         <meta name="viewpoint" content="width = device-width, initial-scale=1.0">
         <link href ="ResumeApplication.css" rel ="stylesheet">
-</head>
+    </head>
 
-<body>
-<header>
-    <strong><h1>Resume Application</h1></strong>
-</header>
+    <header>
+        <strong><h1>Resume Application</h1></strong>
+    </header>
 
-<main>
-<p>Upload Resume: </p><br>
-<p>Enter First Name: </p><br>
-<p>Enter Last Name: </p><br>
-<p>Enter Email: </p><br>
-<p>Position: </p><br>
-</main>
-</body>
+    <body>
+        <main>
+            <form method = "POST">
+            <label for="resume">*Upload Resume:</label><br>
+            <input type= "text" name= "myResume" id="resume">
+
+            <label for= "firstname">*Enter First Name: </label><br>
+            <input type= "text" name= "myFirstName" id= "firstname">
+
+            <label for= "lastname">*Enter Last Name: </label><br>
+            <input type= "text" name= "myLastName" id= "lastname">
+
+
+            <label for= "Email">*Enter Email: </label><br>
+            <input type= "text" name= "myEmail" id= "Email">
+
+            <label for= "Position">*Position: </label><br>
+            <input type= "text" name= "myPosition" id= "Position">
+
+            </form>
+
+        </main>
+    </body>
