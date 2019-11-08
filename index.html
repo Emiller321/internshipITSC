@@ -1,50 +1,27 @@
 <!DOCTYPE html>
 
-
 <html lang = "en">
     <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
 		<title>Resume Application</title>
 		<meta charset="utf-8">
-        <meta name="viewpoint" content="width = device-width, initial-scale=1.0">
         <link href ="ResumeApplication.css" rel ="stylesheet">
+        <script src= "resumeapplication.js"></script>
     </head>
-
-    <header>
-        <strong><h1>Resume Application</h1></strong>
-    </header>
-
     <body>
-        <main>
-            <div ng-app="myApp" ng-controller="formCtrl">
-                <form novalidate>
-                    <label for="resume">*Upload Resume:</label>
-                    <input type= "file" name= "myResume" id="resume">
+        <strong><h1>Resume Application</h1></strong>
+                <form ng-app= "myApp" ng-controller= "formCtrl">
+                    <br>*Upload Resume: <input type= "file" name= "myResume" id="resume"><br>
 
-                    <label for= "firstname">*Enter First Name:<br></label>
-                    <input type= "text" ng-model="user.firstName"><br>
+                    <br>*Enter First Name: <input type= "text" ng-model="user.firstName"><br>
 
-                    <label for= "lastname">*Enter Last Name:<br></label>
-                    <input type= "text" ng-model= "user.lastName"><br>
+                    <br>*Enter Last Name: <input type= "text" ng-model= "user.lastName"><br>
 
-                    <label for= "Email">*Enter Email:<br> </label>
-                    <input type= "text" ng-model= "user.Email"><br>
+                    <br>*Enter Email: <input type= "text" ng-model= "user.Email"><br>
 
-                    <label for= "Position">*Position: </label>
-                    <input type= "search" ngmodel= "user.Position"><br>
+                    <br>*Position:<input type= "text" ng-model= "user.Position"><br>
 
-                    <button ng-click="submit()">SUBMIT</button>
+                    <br><button ng-click="submit(user)">SUBMIT</button>
                 </form>
-            </div>
-            <script>
-                    var app = angular.module('myApp', []);
-                    app.controller('formCtrl',function($scope){
-                        $scope.master = {firstName:"", lastName:""};
-                        $scope.submit = function(){
-                            $scope.user = angular.copy($scope.master);
-                        };
-                        $scope.submit();
-                    });
-            </script>
-        </main>
     </body>
 </html>
