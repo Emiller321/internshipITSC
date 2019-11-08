@@ -1,10 +1,6 @@
-                 <script>
-                    var app = angular.module('myApp', []);
-                    app.controller('formCtrl',function($scope){
-                        $scope.master = {firstName:"", lastName:""};
-                        $scope.submit = function(){
-                            $scope.user = angular.copy($scope.master);
-                        };
-                        $scope.submit();
-                    });
-                  </script>
+   angular.module('myApp', []).controller('formCtrl',function($scope)
+   {
+       $scope.submit = function(user){
+             console.log(user);
+       };
+   });
