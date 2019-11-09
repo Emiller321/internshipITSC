@@ -1,0 +1,23 @@
+{
+  "name": "internshipitsc",
+  "version": "1.0.0",
+  "description": "Resume Application",
+  "main": "resumeapplication.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emiller321/internshipITSC.git"
+  },
+  "author": "Eric Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emiller321/internshipITSC/issues"
+  },
+  "homepage": "https://github.com/Emiller321/internshipITSC#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  }
+}
