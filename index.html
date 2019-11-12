@@ -9,19 +9,22 @@
         <script src= "resumeapplication.js"></script>
     </head>
     <body>
-        <strong><h1>Resume Application</h1></strong>
+                <strong><h1>Resume Application</h1></strong>
+                
                 <form ng-app= "myApp" ng-controller= "formCtrl">
-                    <br>*Upload Resume: <input type= "file" name= "myResume" id="resume"><br>
 
-                    <br>*Enter First Name: <input type= "text" ng-model="user.firstName"><br>
+                    <br>*Upload Resume: <input type= "file" name= "myResume" id="resume"required><br>
 
-                    <br>*Enter Last Name: <input type= "text" ng-model= "user.lastName"><br>
+                    <br>*Enter First Name: <input type= "text" ng-model="user.firstName"required><br>
 
-                    <br>*Enter Email: <input type= "text" ng-model= "user.Email"><br>
+                    <br>*Enter Last Name: <input type= "text" ng-model= "user.lastName"required><br>
 
-                    <br>*Position:<input type= "text" ng-model= "user.Position"><br>
+                    <br>*Enter Email: <input type= "email" ng-model= "user.Email"required><br>
+
+                    <br>*Position:<input type= "text" ng-model= "user.Position"required><br>
 
                     <br><button ng-click="submit(user)">SUBMIT</button>
+
                 </form>
     </body>
 </html>
