@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-
 <html lang = "en">
     <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
-		<title>Resume Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>		
+    <title>Resume Application</title>
 		<meta charset="utf-8">
         <link href ="ResumeApplication.css" rel ="stylesheet">
-        <script src= "resumeapplication.js"></script>
     </head>
     <body>
                 <strong><h1>Resume Application</h1></strong>
-                
-                <form ng-app= "myApp" ng-controller= "formCtrl">
+
+                <div ng-app= "myApp" ng-controller= "myCtrl" onLoad="getPositions()">
+
+                <form>  
 
                     <br>*Upload Resume: <input type= "file" name= "myResume" id="resume"required><br>
 
@@ -21,10 +22,14 @@
 
                     <br>*Enter Email: <input type= "email" ng-model= "user.Email"required><br>
 
-                    <br>*Position:<input type= "text" ng-model= "user.Position"required><br>
+                    <br>*Position:<select ng-model="selectedPosition" ng-options= "position for position in positions"></select><br>
+                </div>
+                <script> src= "angular.js" </script>
 
-                    <br><button ng-click="submit(user)">SUBMIT</button>
+                    <br><button ng-click="submit(User)">SUBMIT</button>
 
+
+                    <script src ="app.js"></script>
                 </form>
     </body>
 </html>
